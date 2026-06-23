@@ -1,1 +1,36 @@
 @import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@layer utilities {
+  .animate-logo-float {
+    animation: logo-float 3s ease-in-out infinite;
+    border: 1px solid rgba(139, 124, 255, 0.4);
+  }
+  .animate-text-shine {
+    background: linear-gradient(90deg, #fff, #8B7CFF, #fff, #8B7CFF, #fff);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: text-shine 4s linear infinite;
+  }
+}
+
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 15px rgba(139, 124, 255, 0.2);
+    border-color: rgba(139, 124, 255, 0.3);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(139, 124, 255, 0.7);
+    border-color: rgba(139, 124, 255, 0.8);
+  }
+}
+
+@keyframes text-shine {
+  to {
+    background-position: 200% center;
+  }
+}
