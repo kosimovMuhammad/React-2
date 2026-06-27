@@ -3,7 +3,7 @@ import type { Todo, TodoDTO, UpdateTodoDTO, GetTodosParams } from '../types/todo
 
 export const todoApi = createApi({
   reducerPath: 'todoApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://to-dos-api.softclub.tj/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: '/' }),
   tagTypes: ['Todo'],
   endpoints: (builder) => ({
     getTodos: builder.query<Todo[], GetTodosParams | void>({
